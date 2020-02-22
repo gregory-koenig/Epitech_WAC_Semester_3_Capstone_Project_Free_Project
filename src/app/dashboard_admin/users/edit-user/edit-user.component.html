@@ -1,0 +1,64 @@
+<div class="container-fluid">
+    <div class="row d-flex">
+        <div class="col-lg-2 col-md-2 col-sm-12" style="height:100%;">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-12">
+            <div class="col-lg-12 col-md-2 col-sm-12" style="height:100%;">
+                <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="col-lg-6 col-md-12 col-sm-12">
+                    <h2>Éditer un utilisateur</h2>
+                    <div class="form-group">
+                        <label for="firstName">Prénom</label>
+                        <input type="text" formControlName="firstName" class="form-control"
+                               [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" />
+                        <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+                            <div *ngIf="f.firstName.errors.required">Le prénom est requis</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastName">Nom</label>
+                        <input type="text" formControlName="lastName" class="form-control"
+                               [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" />
+                        <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+                            <div *ngIf="f.lastName.errors.required">Le nom est requis</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Identifiant</label>
+                        <input type="text" formControlName="username" class="form-control"
+                               [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+                            <div *ngIf="f.username.errors.required">L'identifiant est requis</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe</label>
+                        <input type="text" formControlName="password" class="form-control"
+                               [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+                            <div *ngIf="f.password.errors.required">Le mot de passe est requis</div>
+                            <div *ngIf="f.password.errors.minlength">Le mot de passe doit contenir au minimum 6 caractères</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="mail">Mail</label>
+                        <input type="text" formControlName="mail" class="form-control"
+                               [ngClass]="{ 'is-invalid': submitted && f.mail.errors }" />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numéro de téléphone</label>
+                        <input type="tel" formControlName="phone" class="form-control"
+                               [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                    </div>
+                    <div class="form-group">
+                        <button [disabled]="loading" class="btn btn-primary">Éditer</button>
+                        <img *ngIf="loading" class="pl-3"
+                             src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==" />
+                        <a routerLink="/admin/users" class="btn btn-link">Annuler</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,70 @@
+// Variables
+$blue: #054F84;
+$orange: #E75112;
+$title: 'Raleway', sans-serif;
+
+nav {
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.14);
+}
+
+.logo {
+    width:100%;
+    height: auto;
+}
+
+.admin-name {
+    font-family: $title;
+    font-weight: 300;
+    color: $blue;
+}
+
+.navbar-brand {
+    width: 100px;
+}
+
+.admin-avatar {
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.14);
+        margin-left: 15px;
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 6px;
+}
+
+.has-search .form-control {
+    padding-left: 2.375rem;
+    border-radius: 50px;
+    border: 1px solid #E3E3E3;
+    font-size: 13px;
+    font-weight: 300;
+    &:focus {
+        box-shadow: none;
+        border: 1px solid $blue;
+        color: $blue;
+    }
+}
+
+.form-control::placeholder {
+    color: #E3E3E3;
+    &:focus {
+        color: $blue;
+    }
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #E3E3E3;
+}

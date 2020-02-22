@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row d-flex">
+        <div class="col-lg-2 col-md-2 col-sm-12" style="height:100%;">
+            <app-sidebar></app-sidebar>
+        </div>
+        <div class="col-lg-10 col-md-10 col-sm-12">
+            <div class="col-lg-12 col-md-2 col-sm-12" style="height:100%;">
+                <div>
+                    <table class="table col-lg-12 col-md-2 col-sm-12">
+                        <thead>
+                        <tr>
+                            <th scope="col">Nom</th>
+                            <th scope="col">Identifiant</th>
+                            <th scope="col">Mot de passe</th>
+                            <th scope="col">Mail</th>
+                            <th scope="col">Numéro</th>
+                            <th scope="col">Rôle</th>
+                            <th scope="col">Modifier</th>
+                            <th scope="col">Supprimer</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr *ngFor="let u of users">
+                            <td>{{!!u.firstName ? u.firstName: '-' }} {{ u.lastName }}</td>
+                            <td>{{u.username}}</td>
+                            <td>{{u.password}}</td>
+                            <td><a href="mailto:{{ u.mail }}">{{ u.mail }}</a></td>
+                            <td><a href="tel:{{ u.phone }}">{{ u.phone }}</a></td>
+                            <td>{{ u.role }}</td>
+                            <td><button type="button" class="btn btn-sm btn-warning" routerLink="edit/{{u.id}}">Éditer</button></td>
+<!--                            <td class="text-center"><span class="text-danger" id="deleteUserBtn"-->
+<!--                                                          (click)="deleteUser(u.id)">✘</span></td>-->
+                            <td><button type="button" class="btn btn-sm btn-danger" (click)="deleteUser(u.id)">Supprimer</button></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+

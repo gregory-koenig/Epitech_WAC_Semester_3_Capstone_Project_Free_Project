@@ -1,0 +1,36 @@
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+p {
+    margin: 0;
+}
+
+span:focus {
+    outline: none;
+    border: 0;
+}
+
+*:focus {
+    outline: none !important;
+    border: 0 !important;
+}
+
+/* UL/LI */
+ul {
+    list-style: none;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+/* FORM CONTROL */
+.form-control {
+    color: #212121;
+    background-color: #fff;
+    border: 1px solid #dfe4e6;
+    border-radius: 24px;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    -webkit-box-shadow: none; 
+    border-color:#dfe4e6; 
+}

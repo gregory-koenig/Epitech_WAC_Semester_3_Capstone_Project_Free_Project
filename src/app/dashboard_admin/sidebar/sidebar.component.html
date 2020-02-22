@@ -1,0 +1,57 @@
+<div class="sidebar-container mt-3">
+    <ul class="nav flex-column">
+        <li class="nav-item title">
+            <span>GÉNÉRAL</span>
+        </li>
+        <li class="nav-item cat">
+            <a [routerLink]="['/admin']" class="nav-link">
+                <span class="title-cat">Dashboard</span>
+                <i class="fas fa-home"></i>
+            </a>
+        </li>
+        <li class="nav-item cat">
+            <a [routerLink]="['/admin']" class="nav-link" href="#">
+                <span class="title-cat">Widgets</span>
+                <i class="fas fa-location-arrow"></i>
+            </a>
+        </li>
+
+        <li class="nav-item title">
+            <span>ARTICLES</span>
+        </li>
+        <li class="nav-item cat">
+            <a [routerLink]="['/admin/articles']" class="nav-link" href="#">
+                <span class="title-cat">Liste</span>
+                <i class="fas fa-users"></i>
+            </a>
+        </li>
+        <li class="nav-item cat">
+            <a [routerLink]="['/admin/articles/create']" class="nav-link" href="#">
+                <span class="title-cat">Gérer les articles</span>
+                <i class="fas fa-question-circle"></i>
+            </a>
+        </li>
+        <li class="nav-item cat2">
+            <a [routerLink]="['/admin']" class="nav-link" href="#">
+                <span class="title-cat">Gérer les sondages</span>
+                <i class="fas fa-sms"></i>
+            </a>
+        </li>
+
+        <li class="nav-item title">
+            <span class="listTitle">UTILISATEURS</span>
+        </li>
+        <li class="nav-item cat">
+            <a [routerLink]="['/admin/users']" class="nav-link">
+                <span class="title-cat">Liste</span>
+                <i class="fas fa-users"></i>
+            </a>
+            </li>
+        <li class="nav-item cat">
+            <a [routerLink]="['/admin/users/create']" class="nav-link" href="#">
+                <span class="title-cat">Créer</span>
+                <i class="fas fa-graduation-cap"></i>
+            </a>
+        </li>
+    </ul>
+</div>

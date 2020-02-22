@@ -1,0 +1,65 @@
+button {
+    background-color: transparent;
+}
+
+.navbar {
+    background-color: #fff!important;
+    font-size: 12px;
+    bottom: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    box-shadow: 0 0 5px 1px rgba(0,0,0,.25);
+    display: flex;
+    flex-direction: row;
+    flex-flow: nowrap;
+}
+
+.noborder {
+    border:none;
+}
+
+.pull-right {
+    display: flex;
+    flex-direction: row;
+}
+
+.form-control {
+    text-transform: uppercase;
+    font-size: 11px;
+    width: 10rem;
+    margin-top: 3px;
+}
+
+.navbar-icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.fa-vote-yea, .fa-user {
+    float: left;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 15px;
+    padding-right: 18px;
+    padding-left: 18px;
+}
+
+.nav-separator {
+    width: 1px;
+    background-color: #dfe4e6;
+    height: 100%;
+    float: left;
+}
+
+.btn {
+    margin-left: -41px;
+    padding: 3px;
+    margin-top: 5px!important;
+}
+
+.navbar-end {
+    justify-content: space-between;
+}
+
+
